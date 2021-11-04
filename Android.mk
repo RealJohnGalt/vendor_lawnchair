@@ -12,5 +12,6 @@ LOCAL_OVERRIDES_PACKAGES := Home Launcher2 Launcher3 Launcher3QuickStep NexusLau
 LOCAL_REPLACE_PREBUILT_APK_INSTALLED := $(LOCAL_PATH)/$(LOCAL_SRC_FILES)
 my_src_arch := $(call get-prebuilt-src-arch,$(LOCAL_MODULE_TARGET_ARCH))
 LOCAL_PREBUILT_JNI_LIBS := libs/$(my_src_arch)/libnrb.so
+LOCAL_OPTIONAL_USES_LIBRARIES := androidx.window.extensions androidx.window.sidecar
 LOCAL_DEX_PREOPT := false
 include $(BUILD_PREBUILT)
